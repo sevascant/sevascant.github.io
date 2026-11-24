@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sevascan (SEV) — Live Network & CPU Mining Stats</title>
+<style>
+  body{margin:0;font-family:system-ui,-apple-system,sans-serif;background:#0b1120;color:#e2e8f0}
+  .wrap{max-width:1050px;margin:0 auto;padding:24px}
+  h1{margin:0 0 6px;font-size:26px;color:#38bdf8}
+  .sub{color:#94a3b8;margin-bottom:22px;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:22px}
+  .card{background:#111827;border:1px solid #1e293b;border-radius:12px;padding:16px}
+  .card h3{margin:0 0 6px;font-size:12px;text-transform:uppercase;color:#94a3b8}
+  .big{font-size:22px;font-weight:700;color:#f8fafc}
+  table{width:100%;border-collapse:collapse;background:#111827;border-radius:12px;overflow:hidden;border:1px solid #1e293b}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid #1e293b;font-size:13px}
+  th{background:#0f172a;color:#38bdf8}
+  .mono{font-family:ui-monospace,monospace;font-size:12px;color:#cbd5e1}
+  a{color:#38bdf8;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Sevascan (SEV) — Live Network &amp; CPU Mining Stats</h1>
+  <div class="sub">100% Fair CPU-Only (SHA3-256) • Strict Tor v3 (.onion-only) Mesh • <a href="https://github.com">Download Wallet v1.0.7</a> • <a href="https://github.com">Community Forum</a></div>
+  <div class="grid">
+    <div class="card"><h3>Block Height</h3><div class="big" id="height">#5520+</div></div>
+    <div class="card"><h3>Circulating Supply</h3><div class="big" id="supply">1,380,000 SEV</div></div>
+    <div class="card"><h3>Block Reward</h3><div class="big">250 SEV</div></div>
+    <div class="card"><h3>Algorithm</h3><div class="big">SHA3-256 (CPU)</div></div>
+    <div class="card"><h3>Active Miners</h3><div class="big" id="minersCount">15+</div></div>
+    <div class="card"><h3>Last Updated (UTC)</h3><div class="big" style="font-size:14px" id="updated">Live</div></div>
+  </div>
+  <h2 style="font-size:17px;color:#38bdf8;margin:18px 0 10px">Top CPU Miners (On-Chain Verified)</h2>
+  <table><thead><tr><th>Rank</th><th>Miner Address (Bech32)</th><th>Blocks Mined</th><th>Total Earned</th></tr></thead><tbody id="topMiners"></tbody></table>
+  <h2 style="font-size:17px;color:#38bdf8;margin:22px 0 10px">Verified .onion Seed Nodes (Port 18080)</h2>
+  <div class="card mono">
+    giqz6hmnnjbu2errnc6u73bm3jnxkd6lvorpuozwdkif367mnhq3hbqd.onion:18080<br>
+    andzaivjwh3fnmrji6haltmw5qplosgbhbt2jpxcbosjifk4mxtvdkqd.onion:18080<br>
+    rf5x4fmtu5blrafw6665km7nlpvio4fqxg6j3wkezjhyucqdnin4nkad.onion:18080<br>
+    3rno5skgcjss7tkv2gg42ncf64cz3eplmple7uwivmafl4xmueahwaqd.onion:18080
+  </div>
+</div>
+<script>
+fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
+  document.getElementById('height').innerText = '#' + d.height;
+  document.getElementById('supply').innerText = Number(d.supply).toLocaleString() + ' SEV';
+  document.getElementById('minersCount').innerText = d.total_miners;
+  document.getElementById('updated').innerText = d.updated_utc;
+  document.getElementById('topMiners').innerHTML = (d.top_miners || []).map((m, i) =>
+    `<tr><td>#${i+1}</td><td class="mono">${m.address}</td><td>${m.blocks}</td><td><b>${Number(m.sev).toLocaleString()} SEV</b></td></tr>`
+  ).join('');
+}).catch(()=>{});
+</script>
+</body>
+</html>
