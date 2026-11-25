@@ -1,108 +1,108 @@
 {
-  "height": 5610,
-  "supply": 1402550.0,
-  "total_miners": 45,
-  "updated_utc": "2026-11-24 21:21 UTC",
-  "top_miners": [
-    {
-      "address": "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
-      "blocks": 1386,
-      "sev": 346500.0
-    },
-    {
-      "address": "sev1quf3d2nysewagfkazye9u3kysmu57kdha2njvgn",
-      "blocks": 733,
-      "sev": 183250.0
-    },
-    {
-      "address": "sev1qddj6akqw3kgpm4hqrl5sxntjmfwt6jtkk3cy6n",
-      "blocks": 722,
-      "sev": 180500.0
-    },
-    {
-      "address": "sev1qxtemdm3txv4prnf2092ar8yp2rnultq5639as9",
-      "blocks": 421,
-      "sev": 105250.0
-    },
-    {
-      "address": "sev1qfacza3kc5hdqw0ym6dxlu0qtckzg22erqtjxtz",
-      "blocks": 395,
-      "sev": 98750.0
-    },
-    {
-      "address": "sev1qjx02a0lcsv76kwgyfkd6wepa6rtdl4sasna0vh",
-      "blocks": 278,
-      "sev": 69500.0
-    },
-    {
-      "address": "sev1q2r4a4wdgcp537wusrpm2tunaz7jgltrz295crk",
-      "blocks": 277,
-      "sev": 69250.0
-    },
-    {
-      "address": "sev1qqlsuqavtejndelpcx4ttnxmaxue0nwxn4n6qdu",
-      "blocks": 275,
-      "sev": 68750.0
-    },
-    {
-      "address": "sev1q3q5cklkpjpu94atgj7vst6scytykhefk0ktrx2",
-      "blocks": 199,
-      "sev": 49750.0
-    },
-    {
-      "address": "sev1qjg5t08tq5jwn02xrmml3u58lfp99tjkcsqm88r",
-      "blocks": 183,
-      "sev": 45750.0
-    },
-    {
-      "address": "sev1qzayn0ug4ld9cds3635xtvt7xjfq93aqaw9f6wq",
-      "blocks": 114,
-      "sev": 28500.0
-    },
-    {
-      "address": "sev1qr3al8f3e2qua055382tp6a6xcyssmarskzd4kf",
-      "blocks": 102,
-      "sev": 25500.0
-    },
-    {
-      "address": "sev1qdxv5460qw7fghwktzdyxj7zgmj0fs88ww0v8jw",
-      "blocks": 98,
-      "sev": 24500.0
-    },
-    {
-      "address": "sev1q7l7lwe2kvf4aly0zlk3g0zwry9kmd0werkw39h",
-      "blocks": 77,
-      "sev": 19250.0
-    },
-    {
-      "address": "sev1qaw2j8xgczdqhf7250v4hj3g202msv48p8zf5sn",
-      "blocks": 65,
-      "sev": 16250.0
-    },
-    {
-      "address": "sev1q38nghxxrtsfg72hnms7ka963upzpr4x9vseffs",
-      "blocks": 54,
-      "sev": 13500.0
-    },
-    {
-      "address": "sev1q0gza2ysdzdszcv9jvr8z62g44zr0wl6ecjem6m",
-      "blocks": 40,
-      "sev": 10000.0
-    },
-    {
-      "address": "sev1qrhmsstcmvpu8v06d5exkjkfrjkl8crf8s0zv2n",
-      "blocks": 31,
-      "sev": 7750.0
-    },
-    {
-      "address": "sev1qspscstv6x7pw7s0gk84u7yesfntjul2dtz9asr",
-      "blocks": 29,
-      "sev": 7250.0
-    },
-    {
-      "address": "sev1q8g2lu3rw8maan6z8ljhafafy5khngsptew5u4v",
-      "blocks": 25,
-      "sev": 6250.0
-    }
-  ]
+    "height":  6538,
+    "supply":  1634500,
+    "total_miners":  47,
+    "updated_utc":  "2026-11-25 17:09 UTC",
+    "top_miners":  [
+                       {
+                           "address":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
+                           "blocks":  1386,
+                           "sev":  346500
+                       },
+                       {
+                           "address":  "sev1quf3d2nysewagfkazye9u3kysmu57kdha2njvgn",
+                           "blocks":  733,
+                           "sev":  183250
+                       },
+                       {
+                           "address":  "sev1qddj6akqw3kgpm4hqrl5sxntjmfwt6jtkk3cy6n",
+                           "blocks":  722,
+                           "sev":  180500
+                       },
+                       {
+                           "address":  "sev1qr3al8f3e2qua055382tp6a6xcyssmarskzd4kf",
+                           "blocks":  558,
+                           "sev":  139500
+                       },
+                       {
+                           "address":  "sev1qxtemdm3txv4prnf2092ar8yp2rnultq5639as9",
+                           "blocks":  421,
+                           "sev":  105250
+                       },
+                       {
+                           "address":  "sev1qfacza3kc5hdqw0ym6dxlu0qtckzg22erqtjxtz",
+                           "blocks":  395,
+                           "sev":  98750
+                       },
+                       {
+                           "address":  "sev1qwxadqeh26klulfxeuzzxum3z0ewp7j5l0gqexp",
+                           "blocks":  316,
+                           "sev":  79000
+                       },
+                       {
+                           "address":  "sev1qjx02a0lcsv76kwgyfkd6wepa6rtdl4sasna0vh",
+                           "blocks":  278,
+                           "sev":  69500
+                       },
+                       {
+                           "address":  "sev1q2r4a4wdgcp537wusrpm2tunaz7jgltrz295crk",
+                           "blocks":  277,
+                           "sev":  69250
+                       },
+                       {
+                           "address":  "sev1qqlsuqavtejndelpcx4ttnxmaxue0nwxn4n6qdu",
+                           "blocks":  275,
+                           "sev":  68750
+                       },
+                       {
+                           "address":  "sev1q3q5cklkpjpu94atgj7vst6scytykhefk0ktrx2",
+                           "blocks":  199,
+                           "sev":  49750
+                       },
+                       {
+                           "address":  "sev1qjg5t08tq5jwn02xrmml3u58lfp99tjkcsqm88r",
+                           "blocks":  183,
+                           "sev":  45750
+                       },
+                       {
+                           "address":  "sev1qzayn0ug4ld9cds3635xtvt7xjfq93aqaw9f6wq",
+                           "blocks":  114,
+                           "sev":  28500
+                       },
+                       {
+                           "address":  "sev1qnwhwnvzls0mhqu3nhmt7qtdejaucsal4wugkfu",
+                           "blocks":  102,
+                           "sev":  25500
+                       },
+                       {
+                           "address":  "sev1qdxv5460qw7fghwktzdyxj7zgmj0fs88ww0v8jw",
+                           "blocks":  98,
+                           "sev":  24500
+                       },
+                       {
+                           "address":  "sev1q7l7lwe2kvf4aly0zlk3g0zwry9kmd0werkw39h",
+                           "blocks":  77,
+                           "sev":  19250
+                       },
+                       {
+                           "address":  "sev1qaw2j8xgczdqhf7250v4hj3g202msv48p8zf5sn",
+                           "blocks":  65,
+                           "sev":  16250
+                       },
+                       {
+                           "address":  "sev1q7czqpuj6xutcdg73pxke9xucrhltxe6zrqs80e",
+                           "blocks":  54,
+                           "sev":  13500
+                       },
+                       {
+                           "address":  "sev1q38nghxxrtsfg72hnms7ka963upzpr4x9vseffs",
+                           "blocks":  54,
+                           "sev":  13500
+                       },
+                       {
+                           "address":  "sev1q0gza2ysdzdszcv9jvr8z62g44zr0wl6ecjem6m",
+                           "blocks":  40,
+                           "sev":  10000
+                       }
+                   ]
 }
