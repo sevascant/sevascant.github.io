@@ -1,8 +1,8 @@
 {
-    "height":  7093,
-    "supply":  1773250,
+    "height":  7104,
+    "supply":  1776000,
     "total_miners":  48,
-    "updated_utc":  "2026-11-25 22:49 UTC",
+    "updated_utc":  "2026-11-25 22:59 UTC",
     "top_miners":  [
                        {
                            "address":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
@@ -30,14 +30,14 @@
                            "sev":  105250
                        },
                        {
+                           "address":  "sev1q7czqpuj6xutcdg73pxke9xucrhltxe6zrqs80e",
+                           "blocks":  400,
+                           "sev":  100000
+                       },
+                       {
                            "address":  "sev1qfacza3kc5hdqw0ym6dxlu0qtckzg22erqtjxtz",
                            "blocks":  395,
                            "sev":  98750
-                       },
-                       {
-                           "address":  "sev1q7czqpuj6xutcdg73pxke9xucrhltxe6zrqs80e",
-                           "blocks":  394,
-                           "sev":  98500
                        },
                        {
                            "address":  "sev1qwxadqeh26klulfxeuzzxum3z0ewp7j5l0gqexp",
@@ -61,8 +61,8 @@
                        },
                        {
                            "address":  "sev1q4zqutcad96xsftn49yxku5a7pj2eunp470h9ct",
-                           "blocks":  215,
-                           "sev":  53750
+                           "blocks":  220,
+                           "sev":  55000
                        },
                        {
                            "address":  "sev1q3q5cklkpjpu94atgj7vst6scytykhefk0ktrx2",
