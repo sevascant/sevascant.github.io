@@ -1,8 +1,8 @@
 {
-    "height":  6852,
-    "supply":  1713000,
+    "height":  6996,
+    "supply":  1749000,
     "total_miners":  48,
-    "updated_utc":  "2026-11-25 20:29 UTC",
+    "updated_utc":  "2026-11-25 21:29 UTC",
     "top_miners":  [
                        {
                            "address":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
@@ -35,14 +35,14 @@
                            "sev":  98750
                        },
                        {
+                           "address":  "sev1q7czqpuj6xutcdg73pxke9xucrhltxe6zrqs80e",
+                           "blocks":  343,
+                           "sev":  85750
+                       },
+                       {
                            "address":  "sev1qwxadqeh26klulfxeuzzxum3z0ewp7j5l0gqexp",
                            "blocks":  316,
                            "sev":  79000
-                       },
-                       {
-                           "address":  "sev1q7czqpuj6xutcdg73pxke9xucrhltxe6zrqs80e",
-                           "blocks":  283,
-                           "sev":  70750
                        },
                        {
                            "address":  "sev1qjx02a0lcsv76kwgyfkd6wepa6rtdl4sasna0vh",
@@ -70,6 +70,11 @@
                            "sev":  45750
                        },
                        {
+                           "address":  "sev1q4zqutcad96xsftn49yxku5a7pj2eunp470h9ct",
+                           "blocks":  169,
+                           "sev":  42250
+                       },
+                       {
                            "address":  "sev1qzayn0ug4ld9cds3635xtvt7xjfq93aqaw9f6wq",
                            "blocks":  114,
                            "sev":  28500
@@ -83,11 +88,6 @@
                            "address":  "sev1qdxv5460qw7fghwktzdyxj7zgmj0fs88ww0v8jw",
                            "blocks":  98,
                            "sev":  24500
-                       },
-                       {
-                           "address":  "sev1q4zqutcad96xsftn49yxku5a7pj2eunp470h9ct",
-                           "blocks":  85,
-                           "sev":  21250
                        },
                        {
                            "address":  "sev1q7l7lwe2kvf4aly0zlk3g0zwry9kmd0werkw39h",
