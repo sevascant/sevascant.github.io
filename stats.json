@@ -1,8 +1,8 @@
 {
-    "height":  7199,
-    "supply":  1799750,
+    "height":  7203,
+    "supply":  1800750,
     "total_miners":  49,
-    "updated_utc":  "2026-11-26 00:49 UTC",
+    "updated_utc":  "2026-11-26 00:59 UTC",
     "top_miners":  [
                        {
                            "address":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
