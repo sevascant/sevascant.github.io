@@ -98,7 +98,7 @@ function calcSev() {
   const sevDay = blksDay * 250;
   document.getElementById('sevHour').textContent = (sevDay / 24).toFixed(1) + ' SEV';
   document.getElementById('sevDay').textContent = sevDay.toFixed(0) + ' SEV';
-  document.getElementById('sevWeek').textContent = (sevDay * 7).toFixed(0) + ' SEV';
+  document.getElementById('sevWeek').textContent = (sevDay * 7).ToFixed ? (sevDay * 7).ToFixed(0) : (sevDay * 7).toFixed(0) + ' SEV';
   document.getElementById('blkDay').textContent = blksDay.toFixed(2);
 }
 calcSev();
@@ -117,8 +117,6 @@ fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
   if (d.total_miners) document.getElementById('miners').textContent = d.total_miners;
   if (d.updated_utc) document.getElementById('updated').textContent = d.updated_utc;
   if (d.recent_red) {
-    
-    
     document.getElementById('red-blocks').innerHTML = d.recent_red.map(b =>
       `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#f87171;font-weight:700">${b.conf} / 300</td><td>${b.remaining} left</td></tr>`
     ).join('');
@@ -130,12 +128,13 @@ fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
   }
   const gList = d.paid_green || d.maturing_green;
   if (gList) {
+    document.getElementById('red-blocks');document.getElementById('red-blocks');
     document.getElementById('green-blocks').innerHTML = gList.map(b =>
-      `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#4ade80;font-weight:700">${b.conf} / 300</td><td style="color:#4ade80;font-weight:700">PAID (250 SEV)</td></tr>`).join('');
+      `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#4ade80;font-weight:700">${b.conf} / 300</td><td style="color:#4ade80;font-weight:700">PAID (250 SEV)</td></tr>`
+    ).join('');
   }
-  const top = d.top_miners;
-  if (top) {
-    document.getElementById('miners-body').innerHTML = top.map((m, i) =>
+  if (d.top_miners) {
+    document.getElementById('miners-body').innerHTML = d.top_miners.map((m, i) =>
       `<tr><td>#${i+1}</td><td class="mono">${m.address}</td><td>${m.blocks}</td><td>${Number(m.sev).toLocaleString()} SEV</td></tr>`
     ).join('');
   }
