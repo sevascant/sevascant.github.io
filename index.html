@@ -51,7 +51,7 @@ fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
   document.getElementById('topMiners').innerHTML = (d.top_miners || []).map((m, i) =>
     `<tr><td>#${i+1}</td><td class="mono">${m.address}</td><td>${m.blocks}</td><td><b>${Number(m.sev).toLocaleString()} SEV</b></td></tr>`
   ).join('');
-}).catch(()=>{});
+}).catch(()=>{if(d.recent_red){document.getElementById('red-blocks').innerHTML=d.recent_red.map(b=>`<tr><td>#${b.height}</td><td class='mono'>${b.miner}</td><td style='color:#f87171;font-weight:bold'>${b.conf} / 300</td><td>${b.remaining} left</td></tr>`).join('');}if(d.maturing_green){document.getElementById('green-blocks').innerHTML=d.maturing_green.map(b=>`<tr><td>#${b.height}</td><td class='mono'>${b.miner}</td><td style='color:#4ade80;font-weight:bold'>${b.conf} / 300</td><td>${b.remaining===0?'PAID (250 SEV)':b.remaining+' left'}</td></tr>`).join('');}});
 </script>
 </body>
 </html>
