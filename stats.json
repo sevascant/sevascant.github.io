@@ -1,16 +1,16 @@
 {
-    "height":  8009,
+    "height":  8014,
     "difficulty":  0.0184,
-    "supply":  2002250,
-    "remaining_supply":  77997750,
+    "supply":  2003000,
+    "remaining_supply":  77997000,
     "max_supply":  80000000,
-    "total_miners":  54,
-    "updated_utc":  "2026-11-26 20:42 UTC",
+    "total_miners":  53,
+    "updated_utc":  "2026-11-26 20:51 UTC",
     "top_miners":  [
                        {
                            "address":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
-                           "blocks":  1542,
-                           "sev":  385500
+                           "blocks":  1547,
+                           "sev":  386750
                        },
                        {
                            "address":  "sev1quf3d2nysewagfkazye9u3kysmu57kdha2njvgn",
@@ -110,31 +110,31 @@
                    ],
     "recent_red":  [
                        {
-                           "height":  8009,
+                           "height":  8014,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  1,
                            "remaining":  299
                        },
                        {
-                           "height":  8008,
+                           "height":  8013,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  2,
                            "remaining":  298
                        },
                        {
-                           "height":  8007,
+                           "height":  8012,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  3,
                            "remaining":  297
                        },
                        {
-                           "height":  8006,
+                           "height":  8011,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  4,
                            "remaining":  296
                        },
                        {
-                           "height":  8005,
+                           "height":  8010,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  5,
                            "remaining":  295
@@ -142,31 +142,31 @@
                    ],
     "pending_yellow":  [
                            {
-                               "height":  7715,
+                               "height":  7720,
                                "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                                "conf":  295,
                                "remaining":  5
                            },
                            {
-                               "height":  7714,
-                               "miner":  "sev1q6g50zzcgvd2zey622hdpzc2qugpy9hc9v77vgv",
+                               "height":  7719,
+                               "miner":  "sev1q7lf6upnhh2y7jhjd9q6m5m674vpgm4we68yzwm",
                                "conf":  296,
                                "remaining":  4
                            },
                            {
-                               "height":  7713,
+                               "height":  7718,
                                "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                                "conf":  297,
                                "remaining":  3
                            },
                            {
-                               "height":  7712,
-                               "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
+                               "height":  7717,
+                               "miner":  "sev1q7lf6upnhh2y7jhjd9q6m5m674vpgm4we68yzwm",
                                "conf":  298,
                                "remaining":  2
                            },
                            {
-                               "height":  7711,
+                               "height":  7716,
                                "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                                "conf":  299,
                                "remaining":  1
@@ -174,31 +174,31 @@
                        ],
     "paid_green":  [
                        {
-                           "height":  7710,
-                           "miner":  "sev1qh00nr6ea6xlugyav3nmr2c3gt4aj03seemdp64",
+                           "height":  7715,
+                           "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                            "conf":  300,
                            "remaining":  0
                        },
                        {
-                           "height":  7709,
-                           "miner":  "sev1qh00nr6ea6xlugyav3nmr2c3gt4aj03seemdp64",
+                           "height":  7714,
+                           "miner":  "sev1q6g50zzcgvd2zey622hdpzc2qugpy9hc9v77vgv",
                            "conf":  301,
                            "remaining":  0
                        },
                        {
-                           "height":  7708,
-                           "miner":  "sev1qh00nr6ea6xlugyav3nmr2c3gt4aj03seemdp64",
+                           "height":  7713,
+                           "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                            "conf":  302,
                            "remaining":  0
                        },
                        {
-                           "height":  7707,
+                           "height":  7712,
                            "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                            "conf":  303,
                            "remaining":  0
                        },
                        {
-                           "height":  7706,
+                           "height":  7711,
                            "miner":  "sev1q3d6qkzj57letsvjpx2tn66e7aqf7u5msld7vnu",
                            "conf":  304,
                            "remaining":  0
