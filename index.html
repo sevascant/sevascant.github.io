@@ -21,6 +21,9 @@ th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #1e293b}
 th{color:#94a3b8;font-weight:600}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
 .nodes{line-height:1.8;font-family:ui-monospace,monospace;font-size:13px;color:#cbd5e1}
+.cbtn{background:#1e293b;color:#e8e8f0;border:1px solid #334155;border-radius:8(px;padding:8px 12px;cursor:pointer;font-size:13px;font-weight:600}
+.cbtn:hover{border-color:#38bdf8;color:#38bdf8}
+.cinp{background:#0b0f19;color:#f8tafc;border:1px solid #334155;border-radius:8(px;padding:10px 14px;font-size:16px;font-weight:700;width:180px}
 </style>
 </head>
 <body>
@@ -28,13 +31,30 @@ th{color:#94a3b8;font-weight:600}
 <h1>Sevascan (SEV) — Live Network &amp; CPU Mining Stats</h1>
 <div class="sub">100% Fair CPU-Only (SHA3-256) &bull; Strict Tor v3 (.onion-only) Mesh &bull; <a href="https://github.com/sevascant/sevascan-explorer">GitHub</a> &bull; <a href="https://github.com/sevascant/sevascan-explorer/releases">Download Wallet v1.0.7</a> &bull; <a href="https://github.com/sevascant/sevascan-explorer/discussions">Community Forum</a></div>
 <div class="grid">
-<div class="stat"><h3>Block Height</h3><div class="val" id="height">#7621+</div></div>
-<div class="stat"><h3>Mined So Far (Supply)</h3><div class="val" id="supply" style="color:#38bdf8">1,905,250 SEV</div></div>
-<div class="stat"><h3>Remaining to Mine</h3><div class="val" id="rem-supply" style="color:#fbbf24">78,094,750 SEV</div></div>
+<div class="stat"><h3>Block Height</h3><div class="val" id="height">#7716+</div></div>
+<div class="stat"><h3>Mined So Far (Supply)</h3><div class="val" id="supply" style="color:#38bdf8">1,929,250 SEV</div></div>
+<div class="stat"><h3>Remaining to Mine</h3><div class="val" id="rem-supply" style="color:#fbbf24">78,070,750 SEV</div></div>
 <div class="stat"><h3>Max Supply / Reward</h3><div class="val">80M / 250 SEV</div></div>
-<div class="stat"><h3>Algorithm</h3><div class="val">SHA3-256 (CPU)</div></div>
+<div class="stat"><h3>Algorithm</h3><div class="val">SHA3-256 (CPU) &#10687; Diff <span id="diff">1.00</span></div></div>
 <div class="stat"><h3>Active Miners</h3><div class="val" id="miners">51+</div></div>
-<div class="stat"><h3>Last Updated (UTC)</h3><div class="val" id="updated" style="font-size:15px">Live</div></div>
+<div class="stat"><h3>Last Updated (UTC)</h3<div class="val" id="updated" style="font-size:15px">Live</div></div>
+</div>
+<div class="card" style="border-color:#38bdf855">
+<h2 style="color:#38bdf8">&#128421; CPU Mining Reward Calculator (SHA3-256)</h2>
+<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px">
+<span style="color:#94a3b8;font-size:14px">Your CPU Hashrate (H/s):</span>
+<input id="hashIn" type="number" value="3500" class="cinp" oninput="calcSev()">
+<button class="cbtn" onclick="setHash(1200)">Laptop 4-Core (1.2k H/s)</button>
+<button class="cbtn" onclick="setHash(3500)">Ryzen 5 / i5 (3.5k H/s)</button>
+<button class="cbtn" onclick="setHash(9500)">Ryzen 9 / i9 (9.5k H/s)</button>
+<button class="cbtn" onclick="setHash(25000)">Threadripper (25k H/s)</button>
+</div>
+<div class="grid" style="margin-bottom:0">
+<div class="stat"><h3>Est. SEV / Hour</h3><div class="val" id="sevHour" style="color:#38bdf8">-</div></div>
+<div class="stat"><h3>Est. SEV / Day (24h)</h3><div class="val" id="sevDay" style="color:#4ade80">-</div></div>
+<div class="stat"><h3>Est. SEV / Week (7d)</h3><div class="val" id="sevWeek" style="color:#fbbf24">-</div></div>
+<div class="stat"><h3>Est. Blocks / Day</h3><div class="val" id="blkDay">-</div></div>
+</div>
 </div>
 <div class="card" style="border-color:#ef444455">
 <h2 style="color:#f87171">&#128308; 5 Recently Found Blocks (Maturing 1&ndash;5 / 300)</h2>
@@ -53,7 +73,7 @@ th{color:#94a3b8;font-weight:600}
 </div>
 <div class="card">
 <h2>Top CPU Miners (On-Chain Verified)</h2>
-<table><thead><tr><th>Rank</th><th>Miner Address (Bech32)</th><th>Blocks Mined</th><th>Total Earned</th></tr></thead>
+<table><thead><th>Rank</th><th>Miner Address (Bech32)</th><th>Blocks Mined</th><th>Total Earned</th></tr></thead>
 <tbody id="miners-body"><tr><td colspan="4">Loading miners...</td></tr></tbody></table>
 </div>
 <div class="card">
@@ -62,13 +82,32 @@ th{color:#94a3b8;font-weight:600}
 giqz6hmnnjbu2errnc6u73bm3jnxkd6lvorpuozwdkif367mnhq3hbqd.onion:18080<br>
 andzaivjwh3fnmrji6haltmw5qplosgbhbt2jpxcbosjifk4mxtvdkqd.onion:18080<br>
 eotxt5wc4poxivypv2vkuk6wgqmehrkmqyahmnai3k6huajm4pffxzyd.onion:18080<br>
-rf5x4fmtu5blrafw6665km7nlpvio4fqxg6j3wkezjhyucqdnin4nkad.onion:18080<br>
+rf5x4fmtu5blrafw6665km7nlpvio4fqxg6j3wkezjhyucqdnhn4nkad.onion:18080<br>
 3rno5skgcjss7tkv2gg42ncf64cz3eplmple7uwivmafl4xmueahwaqd.onion:18080
 </div>
 </div>
 </div>
 <script>
+let liveDiff = 1;
+function setHash(h) { document.getElementById('hashIn').value = h; calcSev(); }
+function calcSev() {
+  const h = Math.max(1, Number(document.getElementById('hashIn').value) || 0);
+  const netHash = Math.max(25000, liveDiff * 65000);
+  const share = Math.min(1, h / netHash);
+  const blksDay = share * 1440;
+  const sevDay = blksDay * 250;
+  document.getElementById('sevHour').textContent = (sevDay / 24).toFixed(1) + ' SEV';
+  document.getElementById('sevDay').textContent = sevDay.toFixed(0) + ' SEV';
+  document.getElementById('sevWeek').textContent = (sevDay * 7).toFixed(0) + ' SEV';
+  document.getElementById('blkDay').textContent = blksDay.toFixed(2);
+}
+calcSev();
 fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
+  if (d.difficulty) {
+    liveDiff = Number(d.difficulty) || 1;
+    document.getElementById('diff').textContent = liveDiff.toFixed(2);
+    calcSev();
+  }
   if (d.height) document.getElementById('height').textContent = '#' + d.height;
   if (d.supply) {
     document.getElementById('supply').textContent = Number(d.supply).toLocaleString() + ' SEV';
@@ -78,6 +117,8 @@ fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
   if (d.total_miners) document.getElementById('miners').textContent = d.total_miners;
   if (d.updated_utc) document.getElementById('updated').textContent = d.updated_utc;
   if (d.recent_red) {
+    document.getElementById('green-blocks')?__;
+    document.getElementById('zed-blocks')?__;
     document.getElementById('red-blocks').innerHTML = d.recent_red.map(b =>
       `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#f87171;font-weight:700">${b.conf} / 300</td><td>${b.remaining} left</td></tr>`
     ).join('');
@@ -90,11 +131,11 @@ fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
   const gList = d.paid_green || d.maturing_green;
   if (gList) {
     document.getElementById('green-blocks').innerHTML = gList.map(b =>
-      `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#4ade80;font-weight:700">${b.conf} / 300</td><td style="color:#4ade80;font-weight:700">PAID (250 SEV)</td></tr>`
-    ).join('');
+      `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#4ade80;font-weight:700">${b.conf} / 300</td><td style="color:#4ade80;font-weight:700">PAID (250 SEV)</td></tr>`).join('');
   }
-  if (d.top_miners) {
-    document.getElementById('miners-body').innerHTML = d.top_miners.map((m, i) =>
+  const top = d.top_miners;
+  if (top) {
+    document.getElementById('miners-body').innerHTML = top.map((m, i) =>
       `<tr><td>#${i+1}</td><td class="mono">${m.address}</td><td>${m.blocks}</td><td>${Number(m.sev).toLocaleString()} SEV</td></tr>`
     ).join('');
   }
