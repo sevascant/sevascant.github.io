@@ -117,8 +117,8 @@ fetch('stats.json?t=' + Date.now()).then(r => r.json()).then(d => {
   if (d.total_miners) document.getElementById('miners').textContent = d.total_miners;
   if (d.updated_utc) document.getElementById('updated').textContent = d.updated_utc;
   if (d.recent_red) {
-    document.getElementById('green-blocks')?__;
-    document.getElementById('zed-blocks')?__;
+    
+    
     document.getElementById('red-blocks').innerHTML = d.recent_red.map(b =>
       `<tr><td>#${b.height}</td><td class="mono">${b.miner}</td><td style="color:#f87171;font-weight:700">${b.conf} / 300</td><td>${b.remaining} left</td></tr>`
     ).join('');
