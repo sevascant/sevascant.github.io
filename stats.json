@@ -1,11 +1,11 @@
 {
-    "height":  8253,
+    "height":  8264,
     "difficulty":  0.0023,
-    "supply":  2063250,
-    "remaining_supply":  77936750,
+    "supply":  2066000,
+    "remaining_supply":  77934000,
     "max_supply":  80000000,
     "total_miners":  56,
-    "updated_utc":  "2026-11-27 00:49 UTC",
+    "updated_utc":  "2026-11-27 00:59 UTC",
     "top_miners":  [
                        {
                            "address":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
@@ -88,14 +88,14 @@
                            "sev":  28500
                        },
                        {
+                           "address":  "sev1qyvnrlrccdn8ukg5jjj32nqatg948gxjrnglgp0",
+                           "blocks":  106,
+                           "sev":  26500
+                       },
+                       {
                            "address":  "sev1qnwhwnvzls0mhqu3nhmt7qtdejaucsal4wugkfu",
                            "blocks":  102,
                            "sev":  25500
-                       },
-                       {
-                           "address":  "sev1qyvnrlrccdn8ukg5jjj32nqatg948gxjrnglgp0",
-                           "blocks":  101,
-                           "sev":  25250
                        },
                        {
                            "address":  "sev1qdxv5460qw7fghwktzdyxj7zgmj0fs88ww0v8jw",
@@ -104,37 +104,37 @@
                        },
                        {
                            "address":  "sev1q3wlyy6y792wk2unutjrwjkzakph7lph5ns5d3k",
-                           "blocks":  86,
-                           "sev":  21500
+                           "blocks":  92,
+                           "sev":  23000
                        }
                    ],
     "recent_red":  [
                        {
-                           "height":  8253,
+                           "height":  8264,
                            "miner":  "sev1qyvnrlrccdn8ukg5jjj32nqatg948gxjrnglgp0",
                            "conf":  1,
                            "remaining":  299
                        },
                        {
-                           "height":  8252,
-                           "miner":  "sev1qyvnrlrccdn8ukg5jjj32nqatg948gxjrnglgp0",
+                           "height":  8263,
+                           "miner":  "sev1q3wlyy6y792wk2unutjrwjkzakph7lph5ns5d3k",
                            "conf":  2,
                            "remaining":  298
                        },
                        {
-                           "height":  8251,
-                           "miner":  "sev1q3wlyy6y792wk2unutjrwjkzakph7lph5ns5d3k",
+                           "height":  8262,
+                           "miner":  "sev1qyvnrlrccdn8ukg5jjj32nqatg948gxjrnglgp0",
                            "conf":  3,
                            "remaining":  297
                        },
                        {
-                           "height":  8250,
-                           "miner":  "sev1q3wlyy6y792wk2unutjrwjkzakph7lph5ns5d3k",
+                           "height":  8261,
+                           "miner":  "sev1qyvnrlrccdn8ukg5jjj32nqatg948gxjrnglgp0",
                            "conf":  4,
                            "remaining":  296
                        },
                        {
-                           "height":  8249,
+                           "height":  8260,
                            "miner":  "sev1q3wlyy6y792wk2unutjrwjkzakph7lph5ns5d3k",
                            "conf":  5,
                            "remaining":  295
@@ -142,63 +142,63 @@
                    ],
     "pending_yellow":  [
                            {
-                               "height":  7959,
+                               "height":  7970,
                                "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                                "conf":  295,
                                "remaining":  5
                            },
                            {
-                               "height":  7958,
+                               "height":  7969,
                                "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                                "conf":  296,
                                "remaining":  4
                            },
                            {
-                               "height":  7957,
+                               "height":  7968,
                                "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                                "conf":  297,
                                "remaining":  3
                            },
                            {
-                               "height":  7956,
+                               "height":  7967,
                                "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                                "conf":  298,
                                "remaining":  2
                            },
                            {
-                               "height":  7955,
-                               "miner":  "sev1qqpx2fmgp0rvdj3kl74lm404lkacg9zlhsdd3ma",
+                               "height":  7966,
+                               "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                                "conf":  299,
                                "remaining":  1
                            }
                        ],
     "paid_green":  [
                        {
-                           "height":  7954,
+                           "height":  7965,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  300,
                            "remaining":  0
                        },
                        {
-                           "height":  7953,
+                           "height":  7964,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  301,
                            "remaining":  0
                        },
                        {
-                           "height":  7952,
-                           "miner":  "sev1qqpx2fmgp0rvdj3kl74lm404lkacg9zlhsdd3ma",
+                           "height":  7963,
+                           "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  302,
                            "remaining":  0
                        },
                        {
-                           "height":  7951,
+                           "height":  7962,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  303,
                            "remaining":  0
                        },
                        {
-                           "height":  7950,
+                           "height":  7961,
                            "miner":  "sev1q9rtjtxyewqpq73vgpa2v4pq9mtw3myxfus0gnm",
                            "conf":  304,
                            "remaining":  0
